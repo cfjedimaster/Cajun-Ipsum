@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.2.0/pure-min.css">
+	<link rel="stylesheet" href="/public/app.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+
+	<script src="http://use.typekit.net/ajf8ggy.js"></script>
+	<script>
+		try { Typekit.load(); } catch (e) {}
+	</script>
+</head>
+
+<body>
+
+<div class="pure-g-r" id="layout">
+	
+	<div class="sidebar pure-u">
+		<header class="header pure-u-1">
+			<hgroup>
+				<h1 class="brand-title">Cajun Ipsum</h1>
+				<h2 class="brand-tagline">Some Ipsum for your web page, sha!</h2>
+			</hgroup>
+
+			<!--
+			<nav class="nav">
+				<ul class="nav-list">
+					<li class="nav-item">
+					<a class="pure-button" href="/about">About</a>
+					</li>
+				</ul>
+			</nav>
+			-->
+		</header>
+	</div>
+
+    <div class="content pure-u-1">
+		
+        <div class="posts pure-g">
+
+            <section class="post pure-u-1">
+				
+				{{{body}}} 
+
+            </section>
+        </div>
+
+        <footer class="footer">
+			<!--
+            <div class="pure-menu pure-menu-horizontal pure-menu-open">
+                <ul>
+                    <li><a href="http://purecss.io/">About</a></li>
+                    <li><a href="http://twitter.com/yuilibrary/">Twitter</a></li>
+                    <li><a href="http://github.com/yui/pure/">Github</a></li>
+                </ul>
+            </div>
+-->
+			<p>
+			Created by <a href="http://www.raymondcamden.com">Raymond Camden</a> and 
+			<a href="http://bayousoft.com/">Ryan LeTulle</a>.
+			</p>
+        </footer>
+	
+	</div>
+</div>
+
+<script src="http://yui.yahooapis.com/3.10.1/build/yui/yui-min.js"></script>
+<script>
+YUI().use('node-base', 'node-event-delegate', function (Y) {
+    // This just makes sure that the href="#" attached to the <a> elements
+    // don't scroll you back up the page.
+    Y.one('.content').delegate('click', function (e) {
+        e.preventDefault();
+    }, 'a[href="#"]');
+});
+</script>
+
+</body>
+</html>
+
+

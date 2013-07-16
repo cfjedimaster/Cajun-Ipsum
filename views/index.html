@@ -1,0 +1,32 @@
+<header class="post-header">
+	<h2 class="post-title pure-u-1">Introducing Cajun Ipsum</h2>
+</header>
+
+<div class="pure-u-1">
+	<p>
+		To generate your Cajun Ipsum, just tell us how many paragraphs of text you want and hit the big
+		ole button!
+	</p>
+	<p>
+		<input type="number" style="width:50px" id="paraNumber" value="1"> 
+		<a class="pure-button" href="#" id="genButton">Generate</a>
+	</p>
+	
+	<div id="ipsumResults"></div>
+
+</div>
+
+<script>
+$(document).ready(function() {
+	var resultDiv = $("#ipsumResults");
+	
+	$("#genButton").on("click", function() {
+		var paras = Number($("#paraNumber").val());
+		if(paras >= 1) {
+			$.get("/gen", {total:paras}, function(res, code) {
+				resultDiv.html(res);
+			});
+		}
+	});
+});
+</script>
