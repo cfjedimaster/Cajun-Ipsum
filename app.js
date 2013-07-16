@@ -36,5 +36,8 @@ app.get('/gen', function(req,res) {
 	res.send(cajunProvider.generate(paras));
 });
 
+app.get('*', function(req, res) {
+	res.send('Not Found', 404);	
+});
 
 app.listen(process.env.VCAP_APP_PORT || 3000);
