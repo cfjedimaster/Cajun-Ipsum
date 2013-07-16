@@ -108,7 +108,7 @@ exports.generate = function(paragraphs) {
 			result += sentence;
 		}
 		
-		result += "<p/>";
+		result += "\n\n";
 		
 	}
 	

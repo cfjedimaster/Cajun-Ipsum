@@ -58,7 +58,7 @@ a:focus {
 }
 .brand-tagline {
     font-weight: 300;
-    color: rgb(142, 142, 214);
+    color: rgb(255, 255, 255);
 }
 
 .nav-list {
@@ -162,4 +162,10 @@ a:focus {
     .content {
         padding: 2em 1em 0;
     }
+}
+
+.ipsumResults {
+	width: 100%;
+	height: 300px;
+	border: none;
 }

@@ -12,19 +12,19 @@
 		<a class="pure-button" href="#" id="genButton">Generate</a>
 	</p>
 	
-	<div id="ipsumResults"></div>
-
+	<textarea class="ipsumResults">
+	</textarea>
 </div>
 
 <script>
 $(document).ready(function() {
-	var resultDiv = $("#ipsumResults");
+	var resultDiv = $(".ipsumResults");
 	
 	$("#genButton").on("click", function() {
 		var paras = Number($("#paraNumber").val());
 		if(paras >= 1) {
 			$.get("/gen", {total:paras}, function(res, code) {
-				resultDiv.html(res);
+				resultDiv.val(res);
 			});
 		}
 	});
