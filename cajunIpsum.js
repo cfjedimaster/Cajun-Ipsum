@@ -18,7 +18,8 @@ var rawData = [
 	"levee",
 	"pirogue",
 	"praline",
-	"tasso"
+	"tasso",
+	"couillon"
 ];
 
 function getRandomInt (min, max) {
