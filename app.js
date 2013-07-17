@@ -15,7 +15,7 @@ app.configure(function() {
     
     app.use(express.bodyParser());
     
-	//app.use(express.favicon(__dirname + '/public/favicon.ico'));
+	app.use(express.favicon(__dirname + '/public/favicon.ico'));
 });
 
 app.configure('development', function() {
